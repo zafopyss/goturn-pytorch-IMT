@@ -154,7 +154,6 @@ class GoturnTrain(LightningModule):
                                                     gamma=self.hparams.gamma)
         return [optimizer], [scheduler]
 
-    @pl.data_loader
     def train_dataloader(self):
         """train dataloader"""
         logger.info('===' * 20)
@@ -179,7 +178,6 @@ class GoturnTrain(LightningModule):
 
         return train_loader
 
-    @pl.data_loader
     def val_dataloader(self):
         """validation dataloader"""
         logger.info('===' * 20)
